@@ -1,0 +1,45 @@
+.app-header {
+  background: #fff;
+  box-shadow: 0px 7px 7px 0 #6d6d6d0a;
+  color: #949796;
+  font-family: 'Poppins-Regular';
+  height: 3.625rem;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+
+  .logo {
+    margin-right: 0.6rem;
+  }
+
+  .search-bar {
+    background-color: #f4f5f5;
+    border-radius: 2rem;
+    padding-block: 0.7rem;
+    padding-inline: 0.5rem;
+
+    input {
+      background: transparent;
+      border: none;
+    }
+  }
+
+  .main-nav {
+    & > * {
+      padding-inline: 1rem;
+    }
+    margin-right: 0.6rem;
+    .nav-item {
+      &:hover,
+      &.active {
+        cursor: pointer;
+        box-shadow: inset 0px -3px 0 #2db8a1;
+        color: #2db8a1;
+      }
+    }
+
+    .nav-item .icon {
+      margin-right: 0.4rem;
+    }
+  }
+}

@@ -1,25 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FeedIndex } from './modules/feed/pages/feed/feed-index.component';
+import "./assets/styles/main.scss"
+import { AppHeader } from './modules/core/components/app-header/app-header.component';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main-layout">
+      <AppHeader />
+      <FeedIndex />
+    </main>
   );
 }
 

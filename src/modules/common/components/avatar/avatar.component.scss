@@ -1,0 +1,10 @@
+.avatar {
+  img {
+    border-radius: 50%;
+  }
+
+  &.avatar-m {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
