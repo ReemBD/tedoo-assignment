@@ -8,7 +8,7 @@ import './feed-index.component.scss';
 export const FeedIndex = () => {
   const [posts, setPosts] = useState<IFeedPost[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>();
-  const [error, setError] = useState<string>(null);
+  const [error, setError] = useState<string>('');
 
   const hasMoreRef = useRef(true);
 
@@ -28,7 +28,6 @@ export const FeedIndex = () => {
     setError(null);
 
     try {
-      // const params = new URLSearchParams({ skip: posts.length + 6 });
       const { hasMore, data: nextPosts } = await feedService.queryPosts({ skip: posts.length + 6 });
       hasMoreRef.current = hasMore;
       setPosts((posts) => [...posts, ...nextPosts]);
