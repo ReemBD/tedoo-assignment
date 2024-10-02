@@ -45,7 +45,7 @@ export const FeedPost = memo(({ post, imagesNum, onLikeClicked }: Props) => {
             <_ImageGrid images={images} maxNumToDisplay={imagesNum} />
 
             <section className='engagement-info'>
-                <div className='likes'>
+                <div className='likes flex align-center'>
                     <Icon
                         className='like-icon'
                         name={AppIcon.LikeSolid}
@@ -64,12 +64,12 @@ export const FeedPost = memo(({ post, imagesNum, onLikeClicked }: Props) => {
 
             <section className='actions'>
                 <button
-                    className={`like-action-btn action-btn ${didLike ? 'liked' : ''}`}
+                    className={`like-action-btn action-btn flex align-center ${didLike ? 'liked' : ''}`}
                     onClick={() => onLikeClicked(post.id)}>
                     <Icon name={AppIcon.Like} size={AppIconSize.Small} />
                     <span>Like</span>
                 </button>
-                <button className='comment-action-btn action-btn'>
+                <button className='comment-action-btn action-btn flex align-center'>
                     <Icon name={AppIcon.Comment} size={AppIconSize.Small} />
                     <span>Comment</span>
                 </button>
@@ -87,9 +87,9 @@ export const _PostHeader = ({
     date,
 }: HeaderProps) => {
     return (
-        <header className='header'>
+        <header className='header flex align-center'>
             <Avatar src={avatar} size={AvatarSize.Medium} />
-            <div className='post-details'>
+            <div className='post-details flex-column'>
                 <div className='username'>{username}</div>
                 <div className='extra-details'>
                     <span className='shop-name'>{shopName}</span>
