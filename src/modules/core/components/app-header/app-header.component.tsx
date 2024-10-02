@@ -44,7 +44,7 @@ const _NavItem = ({
             <a className='flex align-center' href='#'>
                 <Icon name={iconName} size={AppIconSize.Small} />
                 <span>{children}</span>
-            </a>{' '}
+            </a>
         </li>
     );
 };

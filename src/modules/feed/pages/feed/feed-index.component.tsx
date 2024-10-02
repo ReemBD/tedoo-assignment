@@ -28,8 +28,8 @@ export const FeedIndex = () => {
     setError(null);
 
     try {
-      const params = new URLSearchParams({ skip: String(posts.length + 6) });
-      const { hasMore, data: nextPosts } = await feedService.queryPosts(params);
+      // const params = new URLSearchParams({ skip: posts.length + 6 });
+      const { hasMore, data: nextPosts } = await feedService.queryPosts({ skip: posts.length + 6 });
       hasMoreRef.current = hasMore;
       setPosts((posts) => [...posts, ...nextPosts]);
     } catch (err) {
