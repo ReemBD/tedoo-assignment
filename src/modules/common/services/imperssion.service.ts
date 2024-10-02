@@ -1,7 +1,9 @@
+import { httpService } from "../../core/services/http.service";
+
 const ThreeSecondsInMs = 3000;
 
 const sendImpression = (itemId: string) => {
-  return `https://backend.tedooo.com/?itemId=${itemId}`;
+  return httpService.get(`https://backend.tedooo.com/?itemId=${itemId}`);
 };
 
 const impressionObserver: IntersectionObserver = ((options) => {
