@@ -10,6 +10,6 @@ interface Props {
 
 export const Icon = ({ name, size, className }: Props) => {
     return <div className={`icon icon-${size} ${className || ''}`}>
-        <img src={getIconPath(name)} />
+        <img src={getIconPath(name)} alt="icon" />
     </div>
 }

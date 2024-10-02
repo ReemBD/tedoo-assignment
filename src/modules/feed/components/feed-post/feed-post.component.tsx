@@ -134,7 +134,7 @@ const _ImageGrid = ({
                         width: getImageWidth(getImagesForDisplay.length, containerWidth),
                     }}
                     className='post-image'>
-                    <img src={image} />
+                    <img src={image} alt="post image" />
                 </div>
             ))}
         </section>
