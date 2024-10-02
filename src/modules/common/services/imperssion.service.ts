@@ -1,4 +1,4 @@
-import { httpService } from "../../core/services/http.service";
+import { httpService } from '../../core/services/http.service';
 
 const ThreeSecondsInMs = 3000;
 
@@ -19,10 +19,10 @@ const impressionObserver: IntersectionObserver = ((options) => {
         time - targetLastViewedMap.get(target) > ThreeSecondsInMs
       ) {
         sendImpression(target.id);
-        return;
+      } else if (isIntersecting) {
+        // * Set new last viewed time for
+        targetLastViewedMap.set(target, time);
       }
-      // * Set new last viewed time for
-      targetLastViewedMap.set(target, time);
     });
   }, options);
 })({
