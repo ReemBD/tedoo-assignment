@@ -1,6 +1,6 @@
 import Axios, { AxiosInstance, AxiosResponse } from 'axios';
 
-const BASE_URL: string = 'https://backend.tedooo.com/hw/';
+const BASE_URL: string = 'https://backend.tedooo.com/';
 
 const axios: AxiosInstance = Axios.create({
   withCredentials: false,

@@ -3,7 +3,7 @@ import { httpService } from '../../core/services/http.service';
 const ThreeSecondsInMs = 3000;
 
 const sendImpression = (itemId: string) => {
-  return httpService.get(`https://backend.tedooo.com/?itemId=${itemId}`);
+  return httpService.get(`/?itemId=${itemId}`);
 };
 
 const impressionObserver: IntersectionObserver = ((options) => {
@@ -18,7 +18,9 @@ const impressionObserver: IntersectionObserver = ((options) => {
         targetLastViewedMap.has(target) &&
         time - targetLastViewedMap.get(target) > ThreeSecondsInMs
       ) {
-        sendImpression(target.id);
+        sendImpression(target.id).catch((err) =>
+          console.error(`Failed to send impression: ${err}`)
+        );
       } else if (isIntersecting) {
         // * Set new last viewed time for
         targetLastViewedMap.set(target, time);

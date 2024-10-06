@@ -127,11 +127,10 @@ const _ImageGrid = ({
 
     return (
         <section ref={containerRef} className='image-grid full'>
-            {' '}
             {getImagesForDisplay(images).map((image) => (
                 <div
                     style={{
-                        width: getImageWidth(getImagesForDisplay.length, containerWidth),
+                        width: getImageWidth(getImagesForDisplay(images).length, containerWidth),
                     }}
                     className='post-image'>
                     <img src={image} alt="post image" />

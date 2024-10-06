@@ -1,3 +1,3 @@
 export interface QueryFeedPostsParams {
-    skip: number
+    skip?: number
 }
