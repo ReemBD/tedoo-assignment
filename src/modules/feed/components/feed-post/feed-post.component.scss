@@ -1,5 +1,4 @@
 .feed-post-layout {
-  box-shadow: 0 1px 7px 0 #282f2d12;
   display: grid;
   grid-template-columns: 2rem 1fr 2rem;
 
@@ -17,6 +16,7 @@
 .feed-post {
   background-color: #fff;
   border-radius: 4px;
+  box-shadow: 0 1px 7px 0 #282f2d12;
   padding-top: 2rem;
 
   .header {
